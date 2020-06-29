@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+
+<body>
+  <h2>Network benchmark</h2>
+  <label>Target IP (if empty, IP of device where this page is viewed will be used): <input type="text"
+      id="target" /></label>
+
+  <br /><br />
+
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <br /><br /><br />
+
+  <div id="output"></div>
+
+  <script>
+    var output = document.getElementById('output');
+    var target = document.getElementById('target');
+    var socket = null;
+
+    document.getElementById('start').addEventListener('click', () => {
+      if (target.value) {
+        socket = io(`http://${window.location.hostname}:2000?target=${target.value}`);
+      } else {
+        socket = io(`http://${window.location.hostname}:2000`);
+      }
+
+      output.innerHTML = `Benchmarking route between ${target.value || 'this device'} and ${window.location.hostname}...`;
+    });
+
+    document.getElementById('stop').addEventListener('click', () => {
+      if (socket) {
+        socket.emit('stop');
+        output.innerHTML = `Benchmarking stopped.`;
+      }
+    });
+  </script>
+</body>
+
+</html>

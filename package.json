@@ -1,0 +1,17 @@
+{
+  "name": "latency-benchmark",
+  "version": "0.0.1",
+  "main": "latency.js",
+  "author": "Andreas Opferkuch <s-h-a-d-o-w@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "net-ping": "1.2.3",
+    "ping": "0.2.3",
+    "prom-client": "12.0.0",
+    "socket.io": "2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.4"
+  }
+}

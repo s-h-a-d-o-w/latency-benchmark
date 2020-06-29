@@ -1,0 +1,9 @@
+global:
+  scrape_interval:     1s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 1s # Evaluate rules every 15 seconds. The default is every 1 minute.
+
+scrape_configs:
+  - job_name: 'router-benchmark'
+    scrape_interval: 1s
+    static_configs:
+    - targets: ['localhost:2000']
