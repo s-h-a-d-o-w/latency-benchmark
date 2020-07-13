@@ -4,7 +4,7 @@ Serves a site, pings a target device and reports those latencies to prometheus. 
 is visualized with grafana.
 
 ## Prerequisites
-
+- Windows (I only tested on Windows): https://github.com/nodejs/node-gyp#on-windows
 - Install prometheus (use config from `/configs/prometheus.yml` in this repo) and run it
 - Install & run grafana, add prometheus as a data source
 - Import the dashboard from `/configs/grafana-dashboard.json`
