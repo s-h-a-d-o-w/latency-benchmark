@@ -1,3 +1,10 @@
+# Prometheus & Grafana
+grafana/
+prometheus/
+*.zip
+*.tar
+*.tar.gz
+
 # Logs
 logs
 *.log
