@@ -4,6 +4,7 @@ prometheus/
 *.zip
 *.tar
 *.tar.gz
+*.csv
 
 # Logs
 logs

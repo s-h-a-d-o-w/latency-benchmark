@@ -3,6 +3,8 @@
 Serves a site, pings a target device and reports those latencies to prometheus. Generated data 
 is visualized with grafana.
 
+Plus: A timestamped `.csv` is generated in the root of this repo after every benchmark.
+
 ## Prerequisites
 
 The following outlines how to use this on Windows but on Linux, it should work almost the same.
