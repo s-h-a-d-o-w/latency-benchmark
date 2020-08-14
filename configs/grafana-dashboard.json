@@ -46,8 +46,8 @@
       "fill": 1,
       "fillGradient": 4,
       "gridPos": {
-        "h": 9,
-        "w": 12,
+        "h": 15,
+        "w": 23,
         "x": 0,
         "y": 0
       },
@@ -102,9 +102,9 @@
         },
         {
           "datasource": "Prometheus",
-          "expr": "histogram_quantile(0.90, sum(rate(latency_bucket[3s])) by (le))",
+          "expr": "histogram_quantile(0.50, sum(rate(latency_bucket[3s])) by (le))",
           "interval": "",
-          "legendFormat": "90th percentile",
+          "legendFormat": "50th percentile",
           "refId": "C"
         },
         {
@@ -189,5 +189,5 @@
   "timezone": "",
   "title": "Network benchmark",
   "uid": "zIYADmGMk",
-  "version": 11
+  "version": 2
 }
