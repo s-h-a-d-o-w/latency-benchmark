@@ -57,7 +57,8 @@ io.on('connection', function (socket) {
   let times = [];
   const pingIt = async function () {
     if (doStop) {
-      console.log('Stopping.');
+      console.log('Stopped.');
+      console.log(`Average over ${allTimes.length} data points: ${allTimes.reduce((a, c) => a + c, 0) / allTimes.length} ms`)
       fs.writeFileSync(`${
           new Date().toISOString().replace(/:/g, '-')
         }.csv`, allTimes
