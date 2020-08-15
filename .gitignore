@@ -5,6 +5,8 @@ prometheus/
 *.tar
 *.tar.gz
 *.csv
+grafana*/
+prometheus*/
 
 # Logs
 logs
